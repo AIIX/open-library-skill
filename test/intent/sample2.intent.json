@@ -1,0 +1,7 @@
+{
+  "utterance": "find book",
+  "intent_type": "SearchByAuthor",
+  "intent": {
+    "FindByAuthorKeyword": "by author"
+  }
+}
