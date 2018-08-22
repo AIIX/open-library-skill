@@ -52,7 +52,7 @@ class OpenLibrarySkill(MycroftSkill):
             resultSpeak = "Found book {0} written by author {1}, first published by {2} in the year {3}".format(booktitle, bookauthor, bookpublisher, bookyear)
             self.speak(resultSpeak)
             downloadstatus = self.checkavailable(bookstatus)
-            self.enclosure.ws.emit(Message("bookObject", {'desktop': {'data': bookObjJson}}))
+            self.enclosure.bus.emit(Message("bookObject", {'desktop': {'data': bookObjJson}}))
     
         except:
             self.speak("No Books Found")
